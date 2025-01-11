@@ -308,8 +308,9 @@
     <input type="color" id="input_bg" oninput="file.bg = this.value; document.body.style.backgroundColor = this.value;">
     <input type="text" id="input_title" oninput="file.title = this.value; document.querySelector('title').innerText = this.value ? this.value : '-';">
     <button onclick="if (confirm('Are you sure you want to reset your garden? This cannot be undone.')) delete_garden_permanently();">Reset garden</button>
-    <button onclick="if (confirm('Are you sure you want to use the infinite items cheat?')) for(tile of Object.keys(actions)){for(action of actions[tile]){for(resource of Object.keys(action.gain)){file.inventory[resource]=2000000000;}}}visually_update_inventory();make_action_particle('💵',this);">Infinite items (cheat)</button>
-    <button onclick="if (confirm('Are you sure you want to skip 1 hour? (This is a debug feature, not a gameplay feature!)')) for(let p=0;p<file.field.length;p++)do_simulation_on_plot(p,7200);for(let p=0;p<file.field.length;p++)for(let r=0;r<file.field[p].cells.length;r++)for(let c=0;c<file.field[p].cells[r].length;c++)if(file.field[p].cells[r][c])file.field[p].cells[r][c].next_ready-=3600000;file.experience+=1000*60*60;make_action_particle('⌛',this);">Time skip 1hr (cheat)</button>
+    <button onclick="window.open('about', '_blank').focus();">About</button>
+    <!--<button onclick="if (confirm('Are you sure you want to use the infinite items cheat?')) for(tile of Object.keys(actions)){for(action of actions[tile]){for(resource of Object.keys(action.gain)){file.inventory[resource]=2000000000;}}}visually_update_inventory();make_action_particle('💵',this);">Infinite items (cheat)</button>
+    <button onclick="if (confirm('Are you sure you want to skip 1 hour? (This is a debug feature, not a gameplay feature!)')) for(let p=0;p<file.field.length;p++)do_simulation_on_plot(p,7200);for(let p=0;p<file.field.length;p++)for(let r=0;r<file.field[p].cells.length;r++)for(let c=0;c<file.field[p].cells[r].length;c++)if(file.field[p].cells[r][c])file.field[p].cells[r][c].next_ready-=3600000;file.experience+=1000*60*60;make_action_particle('⌛',this);">Time skip 1hr (cheat)</button>-->
   </article>
   <div id="field"></div> <!-- all those field rectangles -->
   <nav></nav> <!-- inventory -->
